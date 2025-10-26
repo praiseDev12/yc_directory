@@ -1,7 +1,6 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-	/* config options here */
 	images: {
 		dangerouslyAllowSVG: true,
 		remotePatterns: [
@@ -10,6 +9,9 @@ const nextConfig: NextConfig = {
 				hostname: '*',
 			},
 		],
+	},
+	devIndicators: {
+		position: 'bottom-right', // only valid property left
 	},
 };
 
