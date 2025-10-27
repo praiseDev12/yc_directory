@@ -4,6 +4,7 @@ import { STARTUPS_QUERY } from '@/sanity/lib/queries';
 
 import { StartupTypeCard } from '@/components/StartupCard';
 import { sanityFetch, SanityLive } from '@/sanity/lib/live';
+import { auth } from '@/auth';
 
 const Home = async ({
 	searchParams,
@@ -17,6 +18,8 @@ const Home = async ({
 		query: STARTUPS_QUERY,
 		params,
 	});
+
+	const session = await auth();
 
 	return (
 		<>
